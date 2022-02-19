@@ -1,23 +1,9 @@
 {
   "notes": [
     {
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "title": "other",
-      "text": "other",
-      "id": "8d0rghci8kzt1tzww"
-    },
-    {
-      "title": "save",
-      "text": "something to dave",
-      "id": "8d0rghduokzt4q36a"
-    },
-    {
       "title": "New Note",
-      "text": "New note to save\nthis will be nee",
-      "id": "8d0rghduokzt4quof"
+      "text": "New note",
+      "id": "8d0rghdd8kzu7034o"
     }
   ]
 }

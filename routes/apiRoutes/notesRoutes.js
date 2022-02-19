@@ -1,19 +1,33 @@
 const router = require('express').Router();
 const { notes } = require('../../db/db.json');
-
-// parse incoming string or array data
-router.use(express.urlencoded({ extended: true }));
-// parse incoming JSON data
-router.use(express.json());
+const { createNewNote, findById, deleteId } = require('../../lib/notes');
+// access unique id npm package
+const uniqid = require('uniqid');
 
 
-router.get('/api/notes', (req, res) => {
+router.get('/notes', (req, res) => {
     res.json(notes);
 });
 
-router.post('/api/notes', (req, res) => {
-    console.log(req.body);
-    res.json(req.body);
+router.post('/notes', (req, res) => {
+    // creates unique id
+    req.body.id = uniqid();
+
+    const note = createNewNote(req.body, notes);
+
+    res.json(note);
+});
+
+router.delete('/notes/:id', (req, res) => {
+    const result = findById(req.params.id, notes);
+
+    if (result) {
+        const result = deleteId(req.params.id, notes)
+        res.json(result);
+    }
+    else {
+        res.sendStatus(404);
+    }
 });
 
 module.exports = router;

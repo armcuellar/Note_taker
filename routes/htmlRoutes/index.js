@@ -1,6 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 
+//sends json to files needed 
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/index.html'));
 });

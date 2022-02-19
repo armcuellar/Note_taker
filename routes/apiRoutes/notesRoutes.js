@@ -1,14 +1,16 @@
+// foutes for notes
 const router = require('express').Router();
 const { notes } = require('../../db/db.json');
 const { createNewNote, findById, deleteId } = require('../../lib/notes');
 // access unique id npm package
 const uniqid = require('uniqid');
 
-
+// get all notes
 router.get('/notes', (req, res) => {
     res.json(notes);
 });
 
+// adds notes
 router.post('/notes', (req, res) => {
     // creates unique id
     req.body.id = uniqid();
@@ -18,6 +20,7 @@ router.post('/notes', (req, res) => {
     res.json(note);
 });
 
+// deltes notes
 router.delete('/notes/:id', (req, res) => {
     const result = findById(req.params.id, notes);
 

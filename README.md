@@ -18,9 +18,9 @@ The project is viewable at the project's heroku page.
 URL of deployed application: https://stormy-shore-21961.herokuapp.com/
 
 ## Usage
-A user will be allowed to write a note and save it clicking the save icon. If the note is no longer needed the user can click the trash icon and delete the selected note.
+To add a new note you would have to click the plus icon and update the field, once the required fileds are updated the save icon appears to save the note. If the note is no longer needed the user can click the trash icon and delete the selected note. 
 
-![Screenshot of Note Taker](assets/images/note_taker_screenshot.png)
+![Screenshot of Note Taker](images/note_taker_screenshot.png)
 
 
 ## Credits
